@@ -23,18 +23,26 @@ class Navbar extends Component {
           </Link>
         </Col>
         <Col span={12}>
-        <Menu selectedKeys={[this.state.current]} mode="horizontal">
+        <Menu selectedKeys={[this.state.current]} mode="horizontal" onClick={(e) => this.setState({current: e.key})}>
           <Menu.Item className="menu" key="latest-news">
-            Latest News
+            <Link to="/dashboard">
+              Latest News
+            </Link>
           </Menu.Item>
           <Menu.Item className="menu" key="politics">
-            Politics
+            <Link to="/dashboard">
+              Politics
+            </Link>
           </Menu.Item>
           <Menu.Item className="menu" key="sports">
-            Sports
+            <Link to="/dashboard">
+              Sports
+            </Link>
           </Menu.Item>
           <Menu.Item className="menu" key="other">
-            Other
+            <Link to="/dashboard">
+              Other
+            </Link>
           </Menu.Item>
         </Menu>
         </Col>
